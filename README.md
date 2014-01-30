@@ -48,7 +48,7 @@ CSS file:
 HTML file:
 ```sh
 <head>
-  <title>ionic</title>
+  <title>ionic example</title>
 </head>
 <body>
   <div ng-controller="MenuCtrl">
@@ -136,4 +136,4 @@ ngMeteor
 });
 ```
 
-> *I want to make a special gratitude to Andrew Lee, the owner of ngMeteor, for helping me on creating this amazing smart package. Thank you guy!*
+> *I want to make a special gratitude to [Andrew Lee](https://github.com/loneleeandroo "Andrew Leek"), the owner of ngMeteor, for helping me on creating this amazing smart package. Thank you guy!*
