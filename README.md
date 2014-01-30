@@ -17,7 +17,7 @@ meteor-ionic
 Build your app as a normal Ionic app just taking care of changes made on ngMeteor in order to use AngularJS on Meteor without conflict. Please visit the [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") page to get more details.
 
 ## Example
-Here is a simple example app that can be used to start using Ionic in your project:
+Here is a simple Ionic example app consisting of 3 files that you can use in your project:
 
 CSS file:
 ```sh
@@ -116,7 +116,7 @@ ngMeteor
   ]
 })
 
-// the fadeBar directive
+// The fadeBar directive
 .directive('fadeBar', function($timeout) {
   return {
     restrict: 'E',
