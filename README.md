@@ -46,7 +46,7 @@ CSS file:
 </code></pre>
 
 HTML file:
-<pre><code>
+```sh
 <head>
   <title>ionic</title>
 </head>
@@ -99,10 +99,10 @@ HTML file:
     </side-menus>
   </div>
 </body>
-</code></pre>
+```
 
 JS file:
-<pre><code>
+```sh
 ngMeteor
 
 .controller('MenuCtrl', function($scope) {
@@ -120,7 +120,7 @@ ngMeteor
 .directive('fadeBar', function($timeout) {
   return {
     restrict: 'E',
-    template: '<pre><code><div class="fade-bar"></div></code></pre>',
+    template: '<div class="fade-bar"></div>',
     replace: true,
     link: function($scope, $element, $attr) {
       // Run in the next scope digest
@@ -134,6 +134,6 @@ ngMeteor
     }
   }
 });
-</code></pre>
+```
 
 > *I want to make a special gratitude to Andrew Lee, the owner of ngMeteor, for helping me on creating this amazing smart package. Thank you guy!*
