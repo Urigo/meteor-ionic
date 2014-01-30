@@ -120,7 +120,7 @@ ngMeteor
 .directive('fadeBar', function($timeout) {
   return {
     restrict: 'E',
-    template: '<div class="fade-bar"></div>',
+    template: '<pre><code><div class="fade-bar"></div></code></pre>',
     replace: true,
     link: function($scope, $element, $attr) {
       // Run in the next scope digest
