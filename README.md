@@ -20,7 +20,7 @@ Build your app as a normal Ionic app just taking care of changes made on ngMeteo
 Here is a simple example app that can be used to start using Ionic in your project:
 
 CSS file:
-<pre><code>
+```sh
 .slider, .slider-slides, .slider-slide, .scroll{
 	height:100%;
 }
@@ -43,7 +43,7 @@ CSS file:
 .pink{
 	background: #FF66CC;
 }
-</code></pre>
+```
 
 HTML file:
 ```sh
