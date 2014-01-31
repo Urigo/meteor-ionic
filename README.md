@@ -6,18 +6,13 @@ meteor-ionic
 > Use [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") as underlying meteor-angular bridge, and [meteor-angular-ui-router](https://github.com/ccll/meteor-angular-ui-router "meteor-angular-ui-router") as a requirement of the Ionic framework.
 
 ## Quick start
-1. Install ngMeteor
-<pre><code>mrt add ngMeteor</code></pre>
-2. Install angular-ui-router
-<pre><code>mrt add angular-ui-router --force</code></pre>
-3. Install ionic
-<pre><code>mrt add ionic</code></pre>
+<pre><code>mrt add ionic --force</code></pre>
 
 ## Usage
 Build your app as a normal Ionic app just taking care of changes made on ngMeteor in order to use AngularJS on Meteor without conflict. Please visit the [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") page to get more details.
 
 ## Example
-Here is a simple Ionic example app consisting of 3 files that you can use in your project:
+Here is a simple Ionic example app consisting of 3 files that you can use in your project. Just put them in the "/client" folder and go!
 
 CSS file:
 ```sh
