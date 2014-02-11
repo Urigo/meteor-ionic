@@ -6,7 +6,7 @@ meteor-ionic
 > Use [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") as underlying meteor-angular bridge, and [meteor-angular-ui-router](https://github.com/ccll/meteor-angular-ui-router "meteor-angular-ui-router") as a requirement of the Ionic framework.
 
 ## Quick start
-<pre><code>mrt add ionic --force</code></pre>
+<pre><code>mrt add ionic</code></pre>
 
 ## Usage
 Build your app as a normal Ionic app just taking care of changes made on ngMeteor in order to use AngularJS on Meteor without conflict. Please visit the [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") page to get more details.
@@ -132,4 +132,4 @@ ngMeteor
 });
 ```
 
-> *I want to make a special gratitude to [Andrew Lee](https://github.com/loneleeandroo "Andrew Leek"), the owner of ngMeteor, for helping me on creating this amazing smart package. Thank you guy!*
+> *Special thanks to [Andrew Lee](https://github.com/loneleeandroo "Andrew Leek") for helping me on creating this smart package.*

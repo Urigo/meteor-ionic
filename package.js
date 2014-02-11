@@ -14,4 +14,7 @@ Package.on_use(function (api, where) {
                  'lib/js/ionic.js', 
                  'lib/js/ionic-angular.js', 
                  'init.js'], 'client');
+  
+  //font path override
+	api.add_files('path_override.css', 'client');
 });

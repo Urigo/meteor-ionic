@@ -4,7 +4,7 @@
     "homepage": "https://github.com/cramrov/meteor-ionic",
     "author": "Marc Rovira <marcrvall@gmail.com>",
     "git": "https://github.com/cramrov/meteor-ionic.git",
-    "version": "0.9.21",
+    "version": "0.9.23",
     "packages": {
       "ngMeteor": {},
       "angular-ui-router": {}
