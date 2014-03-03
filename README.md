@@ -47,52 +47,50 @@ HTML file:
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-  <div ng-controller="MenuCtrl">
-    <side-menus>
-      <pane side-menu-content>
+  <div ng-controller="MenuCtrl">    
+    <ion-side-menus>
+      <ion-pane ion-side-menu-content>
         <header class="bar bar-header bar-positive">
           <button class="button button-icon" ng-click="openLeft()"><i class="icon ion-navicon"></i></button>
           <h1 class="title">Slide me</h1>
         </header>
-        <content has-header="true" padding="true">
-          <tabs tabs-type="tabs-icon-only" tabs-style="tabs-primary">
-            <tab title="Home" icon-on="icon ion-ios7-filing" icon-off="icon ion-ios7-filing-outline">
-              <slide-box>
-                <slide>
-                  <div class="box blue">
-                    <h1>BLUE</h1>
-                  </div>
-                </slide>
-                <slide>
+        <ion-content has-header="true" padding="true">
+          <ion-tabs tabs-type="tabs-icon-only" tabs-style="tabs-primary">
+            <ion-tab title="Home" icon-on="icon ion-ios7-filing" icon-off="icon ion-ios7-filing-outline">
+              <ion-slide-box>
+                <ion-slide>
+                  <div class="box blue"><h1>BLUE</h1></div>
+                </ion-slide>
+                <ion-slide>
                   <div class="box yellow"><h1>YELLOW</h1></div>
-                </slide>
-                <slide>
+                </ion-slide>
+                <ion-slide>
                   <div class="box pink"><h1>PINK</h1></div>
-                </slide>
-              </slide-box>
-            </tab>
-            <tab title="About" icon-on="icon ion-ios7-clock" icon-off="icon ion-ios7-clock-outline">
+                </ion-slide>
+              </ion-slide-box>
+            </ion-tab>
+            <ion-tab title="About" icon-on="icon ion-ios7-clock" icon-off="icon ion-ios7-clock-outline">
               <h1>About</h1>
-            </tab>
-            <tab title="Settings" icon-on="icon ion-ios7-gear" icon-off="icon ion-ios7-gear-outline">
+            </ion-tab>
+            <ion-tab title="Settings" icon-on="icon ion-ios7-gear" icon-off="icon ion-ios7-gear-outline">
               <h1>Settings</h1>
-            </tab>
-          </tabs>
-        </content>
-      </pane>
-      <side-menu side="left">
-        <header class="bar bar-header bar-dark" fade-header>
+            </ion-tab>
+          </ion-tabs>
+        </ion-content>
+      </ion-pane>
+      <ion-side-menu side="left">
+        <header class="bar bar-header bar-dark">
           <h1 class="title">Left</h1>
         </header>
-        <content has-header="true">
-          <list>
-            <item ng-repeat="item in items" item="item">
+        <ion-content has-header="true">
+          <ion-list>
+            <ion-item ng-repeat="item in items" item="item">
               [[item.text]]
-            </item>
-          </list>
-        </content>
-      </side-menu>
-    </side-menus>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-side-menu>
+    </ion-side-menus>
   </div>
 </body>
 ```
@@ -110,25 +108,6 @@ ngMeteor
     {text:'Yellow'},
     {text:'Pink'}
   ]
-})
-
-// The fadeBar directive
-.directive('fadeBar', function($timeout) {
-  return {
-    restrict: 'E',
-    template: '<div class="fade-bar"></div>',
-    replace: true,
-    link: function($scope, $element, $attr) {
-      // Run in the next scope digest
-      $timeout(function() {
-        // Watch for changes to the openRatio which is a value between 0 and 1 that says how "open" the side menu is
-        $scope.$watch('sideMenuController.getOpenRatio()', function(ratio) {
-          // Set the transparency of the fade bar
-          $element[0].style.opacity = Math.abs(ratio);
-        });
-      });
-    }
-  }
 });
 ```
 

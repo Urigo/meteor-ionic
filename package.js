@@ -12,7 +12,7 @@ Package.on_use(function (api, where) {
                  'lib/fonts/ionicons.woff', 
                  'lib/css/ionic.css', 
                  'lib/js/ionic.js', 
-                 'lib/js/ionic-angular.js', 
+                 'lib/js/ionic-angular.js',                 
                  'init.js'], 'client');
   
   //font path override
