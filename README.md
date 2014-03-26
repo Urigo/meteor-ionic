@@ -14,7 +14,7 @@ Build your app as a normal Ionic app just taking care of changes made on ngMeteo
 ## Example
 Here is the *Todo* example code made for Ionic consisting of an HTML and a JS file. Simply put the files in the root folder of your project.
 
-HTML file:
+### HTML file
 ```sh
 <head>
   <title>ionic todo example</title>
@@ -92,7 +92,7 @@ HTML file:
 </template>
 ```
 
-JS file:
+### JS file
 ```sh
 Projects = new Meteor.Collection("Projects");
 Tasks = new Meteor.Collection("Tasks");
