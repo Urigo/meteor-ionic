@@ -12,7 +12,7 @@ meteor-ionic
 Build your app as a normal Ionic app just taking care of changes made on ngMeteor in order to use AngularJS on Meteor without conflict. Please visit the [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") page to get more details.
 
 ## Example
-Here is the *Todo* example code made for Ionic consisting of an HTML and a JS file. Simply put them inside */client* folder.
+Here is the *Todo* example code made for Ionic consisting of an HTML and a JS file. Simply put the files in the root folder of your project.
 
 HTML file:
 ```sh
