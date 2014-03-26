@@ -160,11 +160,12 @@ if (Meteor.isClient) {
       });
       
       $scope.openModal = function() {
-        $scope.modal.show();
+        $scope.taskModal.show();
       };
       $scope.closeModal = function() {
-        $scope.modal.hide();
+        $scope.taskModal.hide();
       };
+      
       //Cleanup the modal when we're done with it!
       $scope.$on('$destroy', function() {
         $scope.taskModal.remove();
