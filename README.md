@@ -6,15 +6,18 @@ meteor-ionic
 > Use [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") as underlying meteor-angular bridge, and [meteor-angular-ui-router](https://github.com/ccll/meteor-angular-ui-router "meteor-angular-ui-router") as the routing system required by the Ionic framework.
 
 ## Quick start
+<pre><code>mrt add ngMeteor</code></pre>
+<pre><code>mrt add angular-ui-router</code></pre>
 <pre><code>mrt add ionic</code></pre>
 
 ## Usage
 Build your app as a normal Ionic app just taking care of changes made on ngMeteor in order to use AngularJS on Meteor without conflict. Please visit the [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") page to get more details.
 
 ## Example
-Here is the *Todo* example code made for Ionic consisting of an HTML and a JS file. Simply put the files in the root folder of your project.
+Here is the *Todo* example code made for Ionic consisting of an HTML and a JS file. Simply put the files in the root folder of your project and remove *autopublish* and *insecure* Meteor packages:
+<pre><code>meteor remove autopublish insecure</code></pre>
 
-### HTML file
+#### HTML file
 ```sh
 <head>
   <title>ionic todo example</title>
@@ -92,20 +95,20 @@ Here is the *Todo* example code made for Ionic consisting of an HTML and a JS fi
 </template>
 ```
 
-### JS file
+#### JS file
 ```sh
 Projects = new Meteor.Collection("Projects");
 Tasks = new Meteor.Collection("Tasks");
 
 if (Meteor.isClient) {
-  
+
   ngMeteor.controller('TodoCtrl', ['$scope', '$collection', '$ionicModal', '$rootScope', '$ionicSideMenuDelegate', '$ionicPopup',
     function ($scope, $collection, $ionicModal, $rootScope, $ionicSideMenuDelegate, $ionicPopup) {
-                                     
+
       // Load or initialize projects
       $collection("Projects", $scope);
       $collection("Tasks", $scope);
-      
+
       // A utility function for creating a new project
       // with the given projectTitle
       var createProject = function (projectTitle) {
@@ -116,19 +119,19 @@ if (Meteor.isClient) {
         $scope.Projects.add(newProject);
         $scope.selectProject(newProject, $scope.Projects.length - 1);
       }
-      
+
       // Called to create a new project
       $scope.newProject = function () {        
         $ionicPopup.prompt({
           title: 'New Project',
-          subTitle: 'Name'
+          subTitle: 'Name:'
         }).then(function(res) {
           if (res) {
             createProject(res);
           }          
         });
       };
-      
+
       // Grab the last active, or the first project
       $scope.activeProject = function () {
         var activeProject = $scope.Projects[0];
@@ -139,7 +142,7 @@ if (Meteor.isClient) {
         });
         return activeProject;
       }
-      
+
       // Called to select the given project
       $scope.selectProject = function (project, index) {
         var selectedProject = $scope.Projects[index];
@@ -150,7 +153,7 @@ if (Meteor.isClient) {
         $scope.Projects.add($scope.Projects);
         $ionicSideMenuDelegate.toggleLeft();
       };
-      
+
       // Create our modal
       $ionicModal.fromTemplateUrl('new-task', function (modal) {
         $scope.taskModal = modal;
@@ -158,62 +161,69 @@ if (Meteor.isClient) {
         scope: $scope,
         animation: 'slide-in-up'
       });
-      
+
       $scope.openModal = function() {
         $scope.taskModal.show();
       };
       $scope.closeModal = function() {
         $scope.taskModal.hide();
       };
-      
+
       //Cleanup the modal when we're done with it!
       $scope.$on('$destroy', function() {
         $scope.taskModal.remove();
       });
-      
+
       $scope.createTask = function (task) {
         var activeProject = $scope.activeProject();
         if (!activeProject || !task) {
           return;
         }
-        
+
         $scope.Tasks.add({
           project: activeProject._id,
           title: task.title
         });
-        
+
         $scope.taskModal.hide();
-        
+
         task.title = "";
       };
-      
+
       $scope.deleteTask = function (task) {
         $scope.Tasks.delete(task);
       }
-      
+
       $scope.newTask = function () {
         $scope.taskModal.show();
       };
-      
+
       $scope.closeNewTask = function () {
         $scope.taskModal.hide();
       }
-      
+
       $scope.toggleProjects = function () {
         $ionicSideMenuDelegate.toggleLeft();
       };
-      
+
       // Try to create the first project, make sure to defer
       // this by using $timeout so everything is initialized
       // properly   
+      var isCreated = false;
       $scope.Projects.ready(function () {
-        if ($scope.Projects.length == 0) {
+        if ($scope.Projects.length == 0) {          
           while (true) {
-            var projectTitle = prompt('Your first project title:');
-            if (projectTitle) {
-              createProject(projectTitle);
+            $ionicPopup.prompt({
+              title: 'Your first new project',
+              subTitle: 'Name:'
+            }).then(function(res) {
+              if (res) {
+                createProject(res);
+                isCreated = true;
+              }          
+            });
+            if (isCreated)
               break;
-            }
           }
         }
       }); 
@@ -222,15 +232,15 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  
+
   Meteor.publish('Projects', function () {
     return Projects.find({});
   });
-  
+
   Meteor.publish('Tasks', function () {
     return Tasks.find({});
   });
-  
+
   Projects.allow({
     insert: function () {
       return true;
@@ -242,7 +252,7 @@ if (Meteor.isServer) {
       return true;
     }
   });
-  
+
   Tasks.allow({
     insert: function () {
       return true;
@@ -254,7 +264,7 @@ if (Meteor.isServer) {
       return true;
     }
   });
-  
+
 }
 ```
 
