@@ -102,7 +102,7 @@ Tasks = new Meteor.Collection("Tasks");
 
 if (Meteor.isClient) {
 
-  ngMeteor.controller('TodoCtrl', ['$scope', '$collection', '$ionicModal', '$rootScope', '$ionicSideMenuDelegate', '$ionicPopup',
+  ngMeteor.controller('TodoCtrl', ['$scope', '$collection', '$ionicModal', '$rootScope', '$ionicSideMenuDelegate', '$ionicPopup'],
     function ($scope, $collection, $ionicModal, $rootScope, $ionicSideMenuDelegate, $ionicPopup) {
 
       // Load or initialize projects
@@ -155,7 +155,7 @@ if (Meteor.isClient) {
       };
 
       // Create our modal
-      $ionicModal.fromTemplateUrl('new-task', function (modal) {
+      $ionicModal.fromTemplate(Template['new-task'], function (modal) {
         $scope.taskModal = modal;
       }, {
         scope: $scope,
@@ -169,7 +169,7 @@ if (Meteor.isClient) {
         $scope.taskModal.hide();
       };
 
-      //Cleanup the modal when we're done with it!
+      //Cleanup the modal to avoid memory leaks.
       $scope.$on('$destroy', function() {
         $scope.taskModal.remove();
       });
