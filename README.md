@@ -1,6 +1,8 @@
 meteor-ionic
 ============
 
+# Important: I don't maintain this library anymore.
+
 > [Ionic framework](http://ionicframework.com "Ionic framework") packaged for Meteor.
 
 > Use [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") as underlying meteor-angular bridge, and [meteor-angular-ui-router](https://github.com/ccll/meteor-angular-ui-router "meteor-angular-ui-router") as the routing system required by the Ionic framework.
