@@ -5,15 +5,15 @@ meteor-ionic
 
 > [Ionic framework](http://ionicframework.com "Ionic framework") packaged for Meteor.
 
-> Use [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") as underlying meteor-angular bridge, and [meteor-angular-ui-router](https://github.com/ccll/meteor-angular-ui-router "meteor-angular-ui-router") as the routing system required by the Ionic framework.
+> Use [ngMeteor](https://github.com/Urigo/ngmeteor "ngMeteor") as underlying meteor-angular bridge, and [meteor-angular-ui-router](https://github.com/Urigo/meteor-angular-ui-router "meteor-angular-ui-router") as the routing system required by the Ionic framework.
 
 ## Quick start
-<pre><code>mrt add ngMeteor</code></pre>
-<pre><code>mrt add angular-ui-router</code></pre>
-<pre><code>mrt add ionic</code></pre>
+<pre><code>meteor add urigo:ngmeteor</code></pre>
+<pre><code>meteor add urigo:angular-ui-router</code></pre>
+<pre><code>meteor add mrt:ionic</code></pre>
 
 ## Usage
-Build your app as a normal Ionic app just taking care of changes made on ngMeteor in order to use AngularJS on Meteor without conflict. Please visit the [ngMeteor](https://github.com/loneleeandroo/ngMeteor "ngMeteor") page to get more details.
+Build your app as a normal Ionic app just taking care of changes made on ngMeteor in order to use AngularJS on Meteor without conflict. Please visit the [ngMeteor](https://github.com/Urigo/ngmeteor "ngMeteor") page to get more details.
 
 ## Example
 Here is the *Todo* example code made for Ionic consisting of an HTML and a JS file. Simply put the files in the root folder of your project and remove *autopublish* and *insecure* Meteor packages:
