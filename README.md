@@ -107,9 +107,9 @@ if (Meteor.isClient) {
   ngMeteor.controller('TodoCtrl', ['$scope', '$collection', '$ionicModal', '$rootScope', '$ionicSideMenuDelegate', '$ionicPopup',
     function ($scope, $collection, $ionicModal, $rootScope, $ionicSideMenuDelegate, $ionicPopup) {
 
-      // Load or initialize projects
-      $collection("Projects", $scope);
-      $collection("Tasks", $scope);
+      // https://github.com/Urigo/ngmeteor#using-meteor-collections
+      $collection(Projects, {}).bind($scope, 'Projects', true);
+      $collection(Tasks, {}).bind($scope, 'Tasks', true);
 
       // A utility function for creating a new project
       // with the given projectTitle
@@ -207,28 +207,6 @@ if (Meteor.isClient) {
       $scope.toggleProjects = function () {
         $ionicSideMenuDelegate.toggleLeft();
       };
-
-      // Try to create the first project, make sure to defer
-      // this by using $timeout so everything is initialized
-      // properly   
-      var isCreated = false;
-      $scope.Projects.ready(function () {
-        if ($scope.Projects.length == 0) {          
-          while (true) {
-            $ionicPopup.prompt({
-              title: 'Your first new project',
-              subTitle: 'Name:'
-            }).then(function(res) {
-              if (res) {
-                createProject(res);
-                isCreated = true;
-              }          
-            });
-            if (isCreated)
-              break;
-          }
-        }
-      }); 
     }                              
   ]);
 }
