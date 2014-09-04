@@ -171,7 +171,7 @@ if (Meteor.isClient) {
         $scope.taskModal.hide();
       };
 
-      //Cleanup the modal when we're done with it!
+      //Cleanup the modal when we are done with it!
       $scope.$on('$destroy', function() {
         $scope.taskModal.remove();
       });
