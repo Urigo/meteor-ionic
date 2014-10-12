@@ -1,0 +1,14 @@
+{
+    "name": "ionic",
+    "description": "Ionic framework packaged for Meteor",
+    "homepage": "https://github.com/urigo/meteor-ionic",
+    "author": "Uri Goldshtein <uri.goldshtein@gmail.com> & Marc Rovira <marcrvall@gmail.com>",
+    "git": "https://github.com/urigo/meteor-ionic.git",
+    "version": "0.0.2",
+    "packages": {
+      "bower": {}
+    },
+    "bower": {
+      "ionic": "1.0.0-beta.13"
+    }
+}

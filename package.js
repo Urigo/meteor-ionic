@@ -1,20 +1,17 @@
 Package.describe({
   summary: "Ionic framework packaged for Meteor.",
-  version: "0.0.1",
+  version: "0.0.2",
   git: "https://github.com/Urigo/meteor-ionic.git"
 });
 
 Package.on_use(function (api, where) {
   api.versionsFrom('METEOR@0.9.0.1');
-  api.use(['urigo:angular', 'urigo:angular-ui-router'], 'client');
+  api.use([
+    'urigo:angular@0.4.2',
+    'urigo:angular-ui-router@0.6.0',
+    'mquandalle:bower@0.1.11'],
+    'client');
 
   // ionic files
-  api.addFiles(['lib/fonts/ionicons.eot',
-                 'lib/fonts/ionicons.svg',
-                 'lib/fonts/ionicons.ttf',
-                 'lib/fonts/ionicons.woff',
-                 'lib/css/ionic.css',
-                 'lib/js/ionic.js',
-                 'lib/js/ionic-angular.js',
-                 'init.js'], 'client');
+  api.addFiles('init.js', 'client');
 });
