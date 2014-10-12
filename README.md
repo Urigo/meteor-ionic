@@ -2,12 +2,12 @@ meteor-ionic
 ============
 
 ## Quick start
-<pre><code>meteor add urigo:ngmeteor</code></pre>
+<pre><code>meteor add urigo:angular</code></pre>
 <pre><code>meteor add urigo:angular-ui-router</code></pre>
-<pre><code>meteor add mrt:ionic</code></pre>
+<pre><code>meteor add urigo:ionic</code></pre>
 
 ## Usage
-Build your app as a normal Ionic app just taking care of changes made on ngMeteor in order to use AngularJS on Meteor without conflict. Please visit the [ngMeteor](https://github.com/Urigo/ngmeteor "ngMeteor") page to get more details.
+Build your app as a normal Ionic app just taking care of changes made on angular-meteor in order to use AngularJS on Meteor without conflict. Please visit the [angular-meteor](https://github.com/Urigo/angular-meteor "angular-meteor") page to get more details.
 
 ## Example
 Here is the *Todo* example code made for Ionic consisting of an HTML and a JS file. Simply put the files in the root folder of your project and remove *autopublish* and *insecure* Meteor packages:
@@ -98,10 +98,10 @@ Tasks = new Meteor.Collection("Tasks");
 
 if (Meteor.isClient) {
 
-  ngMeteor.controller('TodoCtrl', ['$scope', '$collection', '$ionicModal', '$rootScope', '$ionicSideMenuDelegate', '$ionicPopup',
+  angularMeteor.controller('TodoCtrl', ['$scope', '$collection', '$ionicModal', '$rootScope', '$ionicSideMenuDelegate', '$ionicPopup',
     function ($scope, $collection, $ionicModal, $rootScope, $ionicSideMenuDelegate, $ionicPopup) {
 
-      // https://github.com/Urigo/ngmeteor#using-meteor-collections
+      // https://github.com/Urigo/angular-meteor#using-meteor-collections
       $collection(Projects, {}).bind($scope, 'Projects', true);
       $collection(Tasks, {}).bind($scope, 'Tasks', true);
 

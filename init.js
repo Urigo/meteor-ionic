@@ -1,2 +1,2 @@
 // add 'ionic' angular module as dependency
-ngMeteor.requires.push('ionic');
+angularMeteor.requires.push('ionic');
