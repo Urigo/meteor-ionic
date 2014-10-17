@@ -7,10 +7,13 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.versionsFrom('METEOR@0.9.0.1');
   api.use([
-    'urigo:angular@0.4.2',
-    'urigo:angular-ui-router@0.6.0',
-    'mquandalle:bower@0.1.11'],
+      'urigo:angular@0.4.2',
+      'urigo:angular-ui-router@0.6.0',
+      'mquandalle:bower@0.1.11'],
     'client');
+
+  // Add bower
+  api.addFiles('smart.json', 'client');
 
   // ionic files
   api.addFiles('init.js', 'client');
