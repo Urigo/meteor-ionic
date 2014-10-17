@@ -1,3 +1,4 @@
 .build*
 *.komodoproject
+.meteor/local/bower
 .idea
