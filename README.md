@@ -181,7 +181,7 @@ if (Meteor.isClient) {
           return;
         }
 
-        $scope.Tasks.add({
+        $scope.Tasks.save({
           project: activeProject._id,
           title: task.title
         });
