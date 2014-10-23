@@ -97,6 +97,9 @@ Projects = new Meteor.Collection("Projects");
 Tasks = new Meteor.Collection("Tasks");
 
 if (Meteor.isClient) {
+    // subscribe to the two collections we use
+    Meteor.subscribe('Projects');
+    Meteor.subscribe('Tasks');
 
   angularMeteor.controller('TodoCtrl', ['$scope', '$collection', '$ionicModal', '$rootScope', '$ionicSideMenuDelegate', '$ionicPopup',
     function ($scope, $collection, $ionicModal, $rootScope, $ionicSideMenuDelegate, $ionicPopup) {
@@ -112,8 +115,11 @@ if (Meteor.isClient) {
           title: projectTitle,
           active: false
         };
-        $scope.Projects.add(newProject);
-        $scope.selectProject(newProject, $scope.Projects.length - 1);
+        $scope.Projects.save(newProject).then(function(res) {
+          if (res) {
+            $scope.selectProject(newProject, $scope.Projects.length - 1);
+          }          
+        });
       }
 
       // Called to create a new project
@@ -146,7 +152,6 @@ if (Meteor.isClient) {
           v.active = false;
         });
         selectedProject.active = true;
-        $scope.Projects.add($scope.Projects);
         $ionicSideMenuDelegate.toggleLeft();
       };
 
