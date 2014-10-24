@@ -102,7 +102,7 @@
     ],
     [
       "templating",
-      "1.0.4"
+      "1.0.7"
     ],
     [
       "tinytest",
@@ -113,20 +113,16 @@
       "1.0.2"
     ],
     [
-      "ui",
-      "1.0.1"
-    ],
-    [
       "underscore",
       "1.0.0"
     ],
     [
       "urigo:angular",
-      "0.4.2"
+      "0.4.8"
     ],
     [
       "urigo:angular-ui-router",
-      "0.6.0"
+      "0.6.1"
     ]
   ],
   "pluginDependencies": [],
