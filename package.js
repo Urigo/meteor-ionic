@@ -15,6 +15,9 @@ Package.on_use(function (api, where) {
   // Add bower
   api.addFiles('smart.json', 'client');
 
+  // Fix icons to absolute path
+  api.addFiles('ionic-override.css', 'client');
+
   // ionic files
   api.addFiles('init.js', 'client');
 });
