@@ -12,6 +12,11 @@ Package.on_use(function (api, where) {
       'mquandalle:bower@0.1.11'],
     'client');
 
+  api.imply([
+    'urigo:angular',
+    'urigo:angular-ui-router'
+  ]);
+
   // Add bower
   api.addFiles('smart.json', 'client');
 
