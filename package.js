@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Ionic framework packaged for Meteor.",
-  version: "0.0.5",
+  version: "0.0.6",
   git: "https://github.com/Urigo/meteor-ionic.git"
 });
 
