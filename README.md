@@ -2,8 +2,6 @@ meteor-ionic
 ============
 
 ## Quick start
-<pre><code>meteor add urigo:angular</code></pre>
-<pre><code>meteor add urigo:angular-ui-router</code></pre>
 <pre><code>meteor add urigo:ionic</code></pre>
 
 ## Usage
