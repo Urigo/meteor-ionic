@@ -5,8 +5,8 @@ meteor-ionic
 <pre><code>meteor add urigo:ionic</code></pre>
 
 ## Usage
-Add this ionic modue to your app as normal
-<pre><code>angular.module('your-app', ['ionic'])</code></pre>
+Add the ionic module to your app as normal
+<pre><code>angular.module('your-app', ['ionic']);</code></pre>
 
 Build your app as a normal Ionic app just taking care of changes made on angular-meteor in order to use AngularJS on Meteor without conflict. Please visit the [angular-meteor](https://github.com/Urigo/angular-meteor "angular-meteor") page to get more details.
 
