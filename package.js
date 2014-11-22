@@ -22,7 +22,4 @@ Package.on_use(function (api, where) {
 
   // Fix icons to absolute path
   api.addFiles('ionic-override.css', 'client');
-
-  // ionic files
-  api.addFiles('init.js', 'client');
 });
