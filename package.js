@@ -12,6 +12,10 @@ Package.on_use(function (api, where) {
       'mquandalle:bower@0.1.11'],
     'client');
 
+  api.use([
+    'fastclick'
+  ], 'client', {weak : true});
+
   api.imply([
     'urigo:angular',
     'urigo:angular-ui-router'
