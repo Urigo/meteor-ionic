@@ -1,19 +1,19 @@
 Package.describe({
   summary: "Ionic framework packaged for Meteor.",
-  version: "0.0.6",
+  version: "0.0.7",
   git: "https://github.com/Urigo/meteor-ionic.git"
 });
 
 Package.on_use(function (api, where) {
   api.versionsFrom('METEOR@0.9.0.1');
   api.use([
-      'urigo:angular@0.4.8',
-      'urigo:angular-ui-router@0.6.1',
+      'urigo:angular@0.5.9',
+      'urigo:angular-ui-router@0.6.2',
       'mquandalle:bower@0.1.11'],
     'client');
 
   api.use([
-    'fastclick'
+    'fastclick@1.0.1'
   ], 'client', {weak : true});
 
   api.imply([

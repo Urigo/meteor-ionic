@@ -118,14 +118,14 @@
     ],
     [
       "urigo:angular",
-      "0.4.8"
+      "0.5.9"
     ],
     [
       "urigo:angular-ui-router",
-      "0.6.1"
+      "0.6.2"
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.34",
+  "toolVersion": "meteor-tool@1.0.36",
   "format": "1.0"
 }
