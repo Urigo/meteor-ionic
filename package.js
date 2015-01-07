@@ -1,20 +1,18 @@
 Package.describe({
   summary: "Ionic framework packaged for Meteor.",
-  version: "0.0.5",
+  version: "0.1.0",
   git: "https://github.com/Urigo/meteor-ionic.git"
 });
 
 Package.on_use(function (api, where) {
   api.versionsFrom('METEOR@0.9.0.1');
   api.use([
-      'urigo:angular@0.4.8',
-      'urigo:angular-ui-router@0.6.1',
+      'urigo:angular@0.6.0-alpha',
       'mquandalle:bower@0.1.11'],
     'client');
 
   api.imply([
-    'urigo:angular',
-    'urigo:angular-ui-router'
+    'urigo:angular'
   ]);
 
   // Add bower
