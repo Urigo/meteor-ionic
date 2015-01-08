@@ -8,8 +8,6 @@ Package.on_use(function (api, where) {
   api.versionsFrom('METEOR@0.9.0.1');
   api.use([
       'urigo:angular@0.6.0-alpha',
-      'urigo:angular@0.5.9',
-      'urigo:angular-ui-router@0.6.2',
       'mquandalle:bower@0.1.11'],
     'client');
 
