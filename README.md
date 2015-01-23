@@ -2,10 +2,14 @@ meteor-ionic
 ============
 
 ## Quick start
-<pre><code>meteor add urigo:ionic</code></pre>
+
+    meteor add urigo:ionic
 
 ## Usage
-Build your app as a normal Ionic app just taking care of changes made on angular-meteor in order to use AngularJS on Meteor without conflict. Please visit the [angular-meteor](https://github.com/Urigo/angular-meteor "angular-meteor") page to get more details.
+You can have a look at [Ionic Framework](http://ionicframework.com/).
+This package just brings the original Ionic Framework through Bower.
+No changes to the original JS code.
+You can use it with [angular-meteor](https://github.com/Urigo/angular-meteor "angular-meteor") but you don't have to.
 
 ## Example
 
