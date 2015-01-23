@@ -4,7 +4,7 @@
   "homepage": "https://github.com/urigo/meteor-ionic",
   "author": "Uri Goldshtein <uri.goldshtein@gmail.com> & Marc Rovira <marcrvall@gmail.com>",
   "git": "https://github.com/urigo/meteor-ionic.git",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "packages": {
     "bower": {}
   },
