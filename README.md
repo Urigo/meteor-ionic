@@ -9,7 +9,7 @@ meteor-ionic
 You can have a look at [Ionic Framework](http://ionicframework.com/).
 This package just brings the original Ionic Framework through Bower.
 No changes to the original JS code.
-You can use it with [angular-meteor](https://github.com/Urigo/angular-meteor "angular-meteor") but you don't have to.
+You can use it with [angular-meteor](https://github.com/Urigo/angular-meteor "angular-meteor") but you don't have to, you can bring only the AngularJS library itself with bower, npm or anyway you want.
 
 ## Example
 
