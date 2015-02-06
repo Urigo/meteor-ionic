@@ -1,25 +1,32 @@
 Package.describe({
   summary: "Ionic framework packaged for Meteor.",
-  version: "0.2.1",
+  version: "0.3.0",
   git: "https://github.com/Urigo/meteor-ionic.git"
 });
 
 Package.on_use(function (api, where) {
   api.versionsFrom('METEOR@0.9.0.1');
 
-  api.use('urigo:angular@0.6.1', 'client', {weak: true});
-  api.use('mquandalle:bower@0.1.11', 'client');
+  api.use('urigo:angular@0.6.5', 'client', {weak: true});
+  api.use('angularui:angular-ui-router@0.2.13', 'client');
 
   api.use([
-    'fastclick@1.0.1'
+    'fastclick@1.0.2'
   ], 'client', {weak : true});
 
-  // Add bower
-  api.addFiles('smart.json', 'client');
-
   // Fix icons to absolute path
-  api.addFiles('ionic-override.css', 'client');
+  api.addFiles([
+    'dependencies/angular-animate.js',
+    'dependencies/angular-sanitize.js',
+    'lib/css/ionic.css',
+    'lib/fonts/ionicons.eot',
+    'lib/fonts/ionicons.svg',
+    'lib/fonts/ionicons.ttf',
+    'lib/fonts/ionicons.woff',
+    'lib/js/ionic.js',
+    'lib/js/ionic-angular.js'
+  ], 'client');
 
-  // ionic files
-  api.addFiles('init.js', 'client');
+  // Stop Meteor's Fastclick for Ionic one
+  api.addFiles('override-fastclick.js', 'client');
 });
