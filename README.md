@@ -33,7 +33,9 @@ You can use it with [angular-meteor](https://github.com/Urigo/angular-meteor "an
 
 ## Example
 
-You can find the "Todo" example in this repository: [meteor-ionic-example](https://github.com/netanelgilad/meteor-ionic-example). Follow the insructions there to get started with ionic on meteor.
+[angular-meteor tutorial step 11](http://angularjs.meteor.com/tutorial-02/step_11)
+
+[meteor-ionic-example](https://github.com/netanelgilad/meteor-ionic-example). Follow the insructions there to get started with ionic on meteor.
 
 
 > *Special thanks to [Andrew Lee](https://github.com/loneleeandroo "Andrew Leek") for helping me on creating this smart package.*
