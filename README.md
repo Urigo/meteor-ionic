@@ -44,6 +44,7 @@ $ ionic start myproject
 - Download the **bleeding edge just-from-master release** from:
   * Ionic CDN: [Nightly Build](http://code.ionicframework.com/#nightly)
   * Using bower: `bower install driftyco/ionic-bower#master`
+  * For [Meteor](https://www.meteor.com/) applications: `meteor add driftyco:ionic` 
 
 Once you have a release, use `js/ionic.js`, `js/ionic-angular.js`, and `css/ionic.css`.
 
