@@ -1,7 +1,7 @@
 // package metadata file for Meteor.js
 var packageName = 'urigo:ionic'; // https://atmospherejs.com/urigo/ionic
 var where = 'client'; // where to install: 'client' or 'server'. For both, pass nothing.
-var version = '1.0.0-rc.1';
+var version = '1.0.0-rc.2';
 
 Package.describe({
   name: packageName,
