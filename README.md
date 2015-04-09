@@ -45,6 +45,9 @@ $ ionic start myproject
   * Ionic CDN: [Nightly Build](http://code.ionicframework.com/#nightly)
   * Using bower: `bower install driftyco/ionic-bower#master`
   * For [Meteor](https://www.meteor.com/) applications: `meteor add urigo:ionic` 
+     - For a beginner level repo integrating Ionic&Angular with Meteor very quickly: https://github.com/ambujpunn/meteorionic
+     - For an advanced level repo integrating Ionic&Angular with Meteor: https://github.com/netanelgilad/meteor-ionic-example
+
 
 Once you have a release, use `js/ionic.js`, `js/ionic-angular.js`, and `css/ionic.css`.
 
