@@ -13,9 +13,9 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom(['METEOR@0.9.0', 'METEOR@1.0']);
 
-  api.use('angularjs:angular@1.3.13', where);
-  api.use('angularjs:angular-animate@1.3.13', where);
-  api.use('angularjs:angular-sanitize@1.3.13', where);
+  api.use('angular:angular@1.3.13', where);
+  api.use('angular:angular-animate@1.3.13', where);
+  api.use('angular:angular-sanitize@1.3.13', where);
   api.use('angularui:angular-ui-router@0.2.13_3', where);
 
   api.use('fastclick@1.0.2', 'client', {weak : true});
