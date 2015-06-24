@@ -1,8 +1,8 @@
-angular:angular@1.3.15
-angular:angular-animate@1.3.15
-angular:angular-sanitize@1.3.15
+angular:angular@1.4.0
+angular:angular-animate@1.4.0
+angular:angular-sanitize@1.4.0
 angularjs:angular@1.3.13
-angularui:angular-ui-router@0.2.13_3
+angularui:angular-ui-router@0.2.15
 meteor@1.1.6
 underscore@1.0.3
 urigo:ionic@1.0.0
