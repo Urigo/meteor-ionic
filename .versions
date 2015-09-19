@@ -1,7 +1,9 @@
-angular:angular@1.4.1
-angular:angular-animate@1.4.1
-angular:angular-sanitize@1.4.1
+angular:angular@1.4.6
+angular:angular-animate@1.4.6
+angular:angular-sanitize@1.4.6
 angularui:angular-ui-router@0.2.15
+driftyco:ionic@1.1.0_2
 meteor@1.1.6
 underscore@1.0.3
-urigo:ionic@1.0.0_1
+urigo:cancel-fastclick@0.0.2
+urigo:ionic@1.1.0_2

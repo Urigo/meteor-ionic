@@ -1,4 +1,0 @@
----
-name: refreshList
-component: ionRefresher
----

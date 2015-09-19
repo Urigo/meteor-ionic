@@ -1,9 +1,8 @@
-# Meteor-Ionic
+# Meteor-Ionic - The official [Ionic Framework](http://ionicframework.com/) bundled to Meteor
 
-This is the official [Ionic Framework](http://ionicframework.com/) budled to Meteor.
+## Deprecated: use the official `driftyco:ionic` package instead and support to pull request here:
 
-This is a fork of the Ionic repo I keep updated until they will add Meteor packaging to thier official repo.
-To support to pull request go here: https://github.com/driftyco/ionic/pull/3133
+https://github.com/driftyco/ionic/pull/3133
 
 # Examples
 
